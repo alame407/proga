@@ -1,4 +1,3 @@
-package ru.itmo.prog;
 public class Calc{
     public static float createRandomNumber(){
         final int max=9,min=-4;
@@ -9,7 +8,7 @@ public class Calc{
     public static void printArray(double[][] arr){
         for (int i=0;i<arr.length;i++){
             for (int j=0;j<arr[i].length;j++){
-                System.out.printf("%.3f ",arr[i][j]);
+                System.out.printf("%7.3f ",arr[i][j]);
             }
             System.out.println();
         }
