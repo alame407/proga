@@ -1,3 +1,5 @@
+package org.itmo.lab3;
+
 import org.itmo.lab3.characters.Crowd;
 import org.itmo.lab3.characters.Goat;
 import org.itmo.lab3.enums.Agility;
