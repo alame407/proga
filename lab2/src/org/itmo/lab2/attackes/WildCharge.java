@@ -10,6 +10,7 @@ public class WildCharge extends PhysicalMove {
         super(Type.ELECTRIC, 90, 100);
     }
 
+    @Override
     protected void applySelfDamage(Pokemon pokemon, double damage) {
         pokemon.setMod(Stat.HP, (int)Math.round(damage / 4.0));
     }
