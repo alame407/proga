@@ -31,6 +31,6 @@ public abstract class Animal implements Animated{
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return name.hashCode();
     }
 }

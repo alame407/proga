@@ -61,6 +61,6 @@ public class Crowd implements Animated{
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, height);
+        return 31 * name.hashCode() + height.hashCode();
     }
 }

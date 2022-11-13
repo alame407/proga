@@ -46,6 +46,6 @@ public class Goat extends Animal{
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), agility);
+        return 31 * getName().hashCode() + agility.hashCode();
     }
 }
