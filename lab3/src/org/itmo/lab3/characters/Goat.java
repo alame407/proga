@@ -2,8 +2,6 @@ package org.itmo.lab3.characters;
 
 import org.itmo.lab3.enums.Agility;
 
-import java.util.Objects;
-
 public class Goat extends Animal{
     private Agility agility;
     public Goat(String name, Agility agility){

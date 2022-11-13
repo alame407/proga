@@ -1,7 +1,5 @@
 package org.itmo.lab3.characters;
 
-import java.util.Objects;
-
 public abstract class Animal implements Animated{
     private String name;
     public abstract void say(String phrase);

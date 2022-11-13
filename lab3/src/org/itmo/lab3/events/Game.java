@@ -3,7 +3,6 @@ package org.itmo.lab3.events;
 import org.itmo.lab3.characters.Animated;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Objects;
 
 public class Game implements GameInterface{
     private List<Animated> members;

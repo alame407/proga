@@ -2,8 +2,6 @@ package org.itmo.lab3.characters;
 
 import org.itmo.lab3.enums.Height;
 
-import java.util.Objects;
-
 public class Crowd implements Animated{
     private String name;
     private Height height;
