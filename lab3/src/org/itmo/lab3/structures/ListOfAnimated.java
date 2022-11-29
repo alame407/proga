@@ -43,11 +43,14 @@ public class ListOfAnimated {
             if (elements[i].equals(element)){
                 inArray = true;
                 indexInArray = i;
+                break;
             }
         }
         if (inArray){
             size--;
-            elements[indexInArray] = elements[size];
+            for (int i=indexInArray;i<size;i++){
+                elements[i] = elements[i+1];
+            }
             elements[size] = null;
         }
     }
