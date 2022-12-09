@@ -1,16 +1,19 @@
 package org.itmo.lab3.characters;
 
 import org.itmo.lab3.enums.Agility;
-
+import org.itmo.lab3.printers.ConsolePrinter;
+import org.itmo.lab3.printers.Printer;
 public class Goat extends Animal {
     private Agility agility;
+    private Printer printer;
     public Goat(String name, Agility agility){
         this.setName(name);
         this.agility = agility;
+        printer = new ConsolePrinter();
     }
     @Override
     public void say(String phrase) {
-        System.out.println(this + " " + "сказал:" + " " + "\"" + phrase + "\"");
+        printer.print(this + " " + "сказал:" + " " + "\"" + phrase + "\"");
     }
 
     public Agility getAgility() {
@@ -21,16 +24,16 @@ public class Goat extends Animal {
         this.agility = agility;
     }
     public void doNotCare(){
-        System.out.println(this + " " + "не обращает внимание");
+        printer.print(this + " " + "не обращает внимание");
     }
     public void goThrough(String objectInAccusativeCase){
-        System.out.println(this + " " + "пролез сквозь" + " " + objectInAccusativeCase);
+        printer.print(this + " " + "пролез сквозь" + " " + objectInAccusativeCase);
     }
     public void hide(String objectInAccusativeCase){
-        System.out.println(this + " " + "спрятался за" + " " + objectInAccusativeCase);
+        printer.print(this + " " + "спрятался за" + " " + objectInAccusativeCase);
     }
     public void jump(String objectInAccusativeCase){
-        System.out.println(this + " " + "запрыгнул на" + " " + objectInAccusativeCase);
+       printer.print(this + " " + "запрыгнул на" + " " + objectInAccusativeCase);
     }
 
     @Override

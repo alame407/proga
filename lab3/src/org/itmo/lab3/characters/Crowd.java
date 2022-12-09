@@ -1,18 +1,22 @@
 package org.itmo.lab3.characters;
 
 import org.itmo.lab3.enums.Height;
+import org.itmo.lab3.printers.ConsolePrinter;
+import org.itmo.lab3.printers.Printer;
 
 public class Crowd implements Animated{
     private String name;
     private Height height;
+    private Printer printer;
 
     public Crowd(String name, Height height){
         this.name = name;
         this.height = height;
+        printer = new ConsolePrinter();
     }
     @Override
     public void say(String phrase) {
-        System.out.println(this + "сказали:" + " " + "\"" + phrase + "\"");
+        printer.print(this + "сказали:" + " " + "\"" + phrase + "\"");
     }
 
     @Override
@@ -33,7 +37,7 @@ public class Crowd implements Animated{
         this.height = height;
     }
     public void laugh(){
-        System.out.println(this + " " + "засмеялась");
+        printer.print(this + " " + "засмеялась");
     }
 
     @Override

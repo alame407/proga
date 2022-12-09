@@ -1,27 +1,31 @@
 package org.itmo.lab3.events;
 
 import org.itmo.lab3.characters.Animated;
+import org.itmo.lab3.printers.ConsolePrinter;
+import org.itmo.lab3.printers.Printer;
 import org.itmo.lab3.structures.ListOfAnimated;
 
 public class Game implements GameInterface{
     private ListOfAnimated members;
+    private Printer printer;
 
     public Game(){
         members = new ListOfAnimated();
+        printer = new ConsolePrinter();
     }
     @Override
     public void start() {
-        System.out.println("Игра началась");
+        printer.print("Игра началась");
     }
 
     @Override
     public void kickMember(Animated player) {
         if (members.contains(player)){
             members.remove(player);
-            System.out.println(player + " " + "получил мячом по лбу");
+            printer.print(player + " " + "получил мячом по лбу");
         }
         else{
-            System.out.println("Такого игрока нет");
+            printer.print("Такого игрока нет");
         }
 
     }
@@ -29,12 +33,12 @@ public class Game implements GameInterface{
     @Override
     public void addMember(Animated player) {
         members.add(player);
-        System.out.println(player + " " + "участвует в игре");
+        printer.print(player + " " + "участвует в игре");
     }
 
     @Override
     public void end() {
-        System.out.println("Игра закончилась");
+        printer.print("Игра закончилась");
     }
 
     @Override
