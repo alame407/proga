@@ -11,7 +11,7 @@ public class ListOfAnimated {
     public ListOfAnimated(){
         elements = new Animated[DEFAULT_SIZE];
         size = 0;
-        currentMaxSize = 10;
+        currentMaxSize = DEFAULT_SIZE;
     }
     public void add(Animated element){
         if (size < currentMaxSize){
