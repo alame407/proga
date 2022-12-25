@@ -3,6 +3,9 @@ package org.itmo.lab3.characters;
 import org.itmo.lab3.enums.Agility;
 import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
+
+import java.util.Objects;
+
 public class Goat extends Animal {
     private Agility agility;
     private Printer printer;
@@ -47,6 +50,6 @@ public class Goat extends Animal {
 
     @Override
     public int hashCode() {
-        return 31 * getName().hashCode() + agility.hashCode();
+        return Objects.hash(super.hashCode(), agility);
     }
 }

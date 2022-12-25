@@ -20,9 +20,7 @@ public class ListOfAnimated {
         }
         else{
             Animated[] newList = new Animated[currentMaxSize+DEFAULT_INCREASE];
-            for (int i=0; i<size;i++){
-                newList[i] = elements[i];
-            }
+            if (size >= 0) System.arraycopy(elements, 0, newList, 0, size);
             newList[size] = element;
             elements = newList;
             size++;

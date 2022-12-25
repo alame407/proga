@@ -5,6 +5,8 @@ import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
 import org.itmo.lab3.structures.ListOfAnimated;
 
+import java.util.Objects;
+
 public class Game implements GameInterface{
     private ListOfAnimated members;
     private Printer printer;
@@ -51,7 +53,7 @@ public class Game implements GameInterface{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return members.equals(game.members);
+        return Objects.equals(members, game.members);
     }
 
     @Override

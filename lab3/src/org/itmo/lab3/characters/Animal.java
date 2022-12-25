@@ -1,5 +1,7 @@
 package org.itmo.lab3.characters;
 
+import java.util.Objects;
+
 public abstract class Animal implements Animated{
     private String name;
     public abstract void say(String phrase);
@@ -24,11 +26,11 @@ public abstract class Animal implements Animated{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return name.equals(animal.name);
+        return Objects.equals(name, animal.name);
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode();
+        return Objects.hash(name);
     }
 }

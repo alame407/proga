@@ -4,6 +4,8 @@ import org.itmo.lab3.enums.Height;
 import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
 
+import java.util.Objects;
+
 public class Crowd implements Animated{
     private String name;
     private Height height;
@@ -58,11 +60,11 @@ public class Crowd implements Animated{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Crowd crowd = (Crowd) o;
-        return name.equals(crowd.name) && height == crowd.height;
+        return Objects.equals(name, crowd.name) && height == crowd.height;
     }
 
     @Override
     public int hashCode() {
-        return 31 * name.hashCode() + height.hashCode();
+        return Objects.hash(name, height);
     }
 }
