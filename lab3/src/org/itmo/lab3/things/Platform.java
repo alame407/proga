@@ -18,9 +18,4 @@ public class Platform extends Thing {
         Platform platform = (Platform) o;
         return Objects.equals(getName(), platform.getName());
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName());
-    }
 }
