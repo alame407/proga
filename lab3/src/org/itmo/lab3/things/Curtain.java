@@ -1,11 +1,17 @@
 package org.itmo.lab3.things;
 
+import org.itmo.lab3.characters.Animated;
+import org.itmo.lab3.printers.ConsolePrinter;
+import org.itmo.lab3.printers.Printer;
+
 import java.util.Objects;
 
 public class Curtain {
     private String name;
+    private Printer printer;
     public Curtain(String name){
         this.name=name;
+        printer = new ConsolePrinter();
     }
 
     public String getName() {
@@ -14,6 +20,9 @@ public class Curtain {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public void restrictMovement(Animated person){
+        printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + person);
     }
 
     @Override
