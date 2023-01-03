@@ -537,7 +537,7 @@
 											"top": 526,
 											"width": 204.83251953125,
 											"height": 13,
-											"text": "-heigh: Height",
+											"text": "-height: Height",
 											"horizontalAlignment": 0
 										},
 										{
@@ -8131,7 +8131,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGD+p2r+kOFsgg="
 							},
-							"name": "heigh",
+							"name": "height",
 							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAGEHegsiz9IFDw="
