@@ -6,28 +6,14 @@ import org.itmo.lab3.printers.Printer;
 
 import java.util.Objects;
 
-public class Curtain implements PlaceToHide {
-    private String name;
+public class Curtain extends Thing implements PlaceToHide {
     private Printer printer;
     public Curtain(String name){
-        this.name=name;
+        super(name);
         printer = new ConsolePrinter();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
     public void restrictMovement(Animated character){
         printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + character);
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 
     @Override
@@ -35,11 +21,11 @@ public class Curtain implements PlaceToHide {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Curtain curtain = (Curtain) o;
-        return Objects.equals(name, curtain.name);
+        return Objects.equals(getName(), curtain.getName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(getName());
     }
 }

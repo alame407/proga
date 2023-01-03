@@ -2,20 +2,13 @@ package org.itmo.lab3.things;
 
 import java.util.Objects;
 
-public class Platform {
-    private String name;
+public class Platform extends Thing {
     public Platform(String name){
-        this.name=name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
+        super(name);
     }
     @Override
     public String toString() {
-        return this.name;
+        return this.getName();
     }
 
     @Override
@@ -23,11 +16,11 @@ public class Platform {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Platform platform = (Platform) o;
-        return Objects.equals(name, platform.name);
+        return Objects.equals(getName(), platform.getName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(getName());
     }
 }
