@@ -23,9 +23,4 @@ public class Curtain extends Thing implements PlaceToHide {
         Curtain curtain = (Curtain) o;
         return Objects.equals(getName(), curtain.getName());
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName());
-    }
 }
