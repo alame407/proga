@@ -29,14 +29,14 @@ public class Goat extends Animal {
     public void doNotCare(){
         printer.print(this + " " + "не обращает внимание");
     }
-    public void goThrough(String objectInAccusativeCase){
-        printer.print(this + " " + "пролез сквозь" + " " + objectInAccusativeCase);
+    public void goThrough(Object obj){
+        printer.print(this + " " + "пролез сквозь" + " " + obj);
     }
-    public void hide(String objectInAccusativeCase){
-        printer.print(this + " " + "спрятался за" + " " + objectInAccusativeCase);
+    public void hide(Object obj){
+        printer.print(this + " " + "спрятался за" + " " + obj);
     }
-    public void jump(String objectInAccusativeCase){
-       printer.print(this + " " + "запрыгнул на" + " " + objectInAccusativeCase);
+    public void jump(Object obj){
+       printer.print(this + " " + "запрыгнул на" + " " + obj);
     }
 
     @Override
