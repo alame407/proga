@@ -6,7 +6,7 @@ import org.itmo.lab3.printers.Printer;
 
 import java.util.Objects;
 
-public class Curtain {
+public class Curtain implements PlaceToHide {
     private String name;
     private Printer printer;
     public Curtain(String name){
@@ -21,8 +21,8 @@ public class Curtain {
     public void setName(String name) {
         this.name = name;
     }
-    public void restrictMovement(Animated person){
-        printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + person);
+    public void restrictMovement(Animated character){
+        printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + character);
     }
 
     @Override

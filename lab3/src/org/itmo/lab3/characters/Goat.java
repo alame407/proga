@@ -3,6 +3,7 @@ package org.itmo.lab3.characters;
 import org.itmo.lab3.enums.Agility;
 import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
+import org.itmo.lab3.things.PlaceToHide;
 
 import java.util.Objects;
 
@@ -32,8 +33,9 @@ public class Goat extends Animal {
     public void goThrough(Object obj){
         printer.print(this + " " + "пролез сквозь" + " " + obj);
     }
-    public void hide(Object obj){
-        printer.print(this + " " + "спрятался за" + " " + obj);
+    public void hide(PlaceToHide place){
+        printer.print(this + " " + "спрятался за" + " " + place);
+        place.restrictMovement(this);
     }
     public void jump(Object obj){
        printer.print(this + " " + "запрыгнул на" + " " + obj);

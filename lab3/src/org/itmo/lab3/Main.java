@@ -25,7 +25,6 @@ public class Main {
         game.addMember(crowd);
         game.addMember(goat);
         goat.hide(curtain);
-        curtain.restrictMovement(goat);
         goat.setAgility(Agility.HIGH);
         game.start();
         game.kickMember(goat);
