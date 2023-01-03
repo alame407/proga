@@ -11,7 +11,7 @@ public class Goat extends Animal {
     private Agility agility;
     private Printer printer;
     public Goat(String name, Agility agility){
-        this.setName(name);
+        super(name);
         this.agility = agility;
         printer = new ConsolePrinter();
     }

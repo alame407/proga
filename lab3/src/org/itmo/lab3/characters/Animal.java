@@ -4,6 +4,9 @@ import java.util.Objects;
 
 public abstract class Animal implements Animated{
     private String name;
+    public Animal(String name){
+        this.name=name;
+    }
     public abstract void say(String phrase);
 
     @Override
