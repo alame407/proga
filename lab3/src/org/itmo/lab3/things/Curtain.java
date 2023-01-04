@@ -15,12 +15,4 @@ public class Curtain extends Thing implements PlaceToHide {
     public void restrictMovement(Animated character){
         printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + character);
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Curtain curtain = (Curtain) o;
-        return Objects.equals(getName(), curtain.getName());
-    }
 }
