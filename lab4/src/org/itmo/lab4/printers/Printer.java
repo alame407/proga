@@ -1,6 +1,6 @@
-package org.itmo.lab3.printers;
+package org.itmo.lab4.printers;
 
-import org.itmo.lab3.actions.SimpleAction;
+import org.itmo.lab4.actions.SimpleAction;
 
 import java.util.Objects;
 

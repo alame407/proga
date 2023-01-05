@@ -1,8 +1,8 @@
-package org.itmo.lab3.characters;
+package org.itmo.lab4.characters;
 
-import org.itmo.lab3.enums.Height;
-import org.itmo.lab3.printers.ConsolePrinter;
-import org.itmo.lab3.printers.Printer;
+import org.itmo.lab4.enums.Height;
+import org.itmo.lab4.printers.ConsolePrinter;
+import org.itmo.lab4.printers.Printer;
 
 import java.util.Objects;
 

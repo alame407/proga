@@ -1,6 +1,6 @@
-package org.itmo.lab3.characters;
+package org.itmo.lab4.characters;
 
-import org.itmo.lab3.actions.SimpleAction;
+import org.itmo.lab4.actions.SimpleAction;
 
 public interface Animated {
     void doSimpleAction(SimpleAction action);

@@ -1,14 +1,14 @@
-package org.itmo.lab3;
+package org.itmo.lab4;
 
-import org.itmo.lab3.actions.SimpleAction;
-import org.itmo.lab3.characters.Crowd;
-import org.itmo.lab3.characters.Goat;
-import org.itmo.lab3.enums.Agility;
-import org.itmo.lab3.enums.Height;
-import org.itmo.lab3.events.Game;
-import org.itmo.lab3.events.GameInterface;
-import org.itmo.lab3.things.Curtain;
-import org.itmo.lab3.things.Platform;
+import org.itmo.lab4.actions.SimpleAction;
+import org.itmo.lab4.characters.Crowd;
+import org.itmo.lab4.characters.Goat;
+import org.itmo.lab4.enums.Agility;
+import org.itmo.lab4.enums.Height;
+import org.itmo.lab4.events.Game;
+import org.itmo.lab4.events.GameInterface;
+import org.itmo.lab4.things.Curtain;
+import org.itmo.lab4.things.Platform;
 
 
 public class Main {

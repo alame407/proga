@@ -1,13 +1,21 @@
-package org.itmo.lab3.characters;
+package org.itmo.lab4.characters;
+
+import org.itmo.lab4.actions.SimpleAction;
+import org.itmo.lab4.printers.ConsolePrinter;
+import org.itmo.lab4.printers.Printer;
 
 import java.util.Objects;
 
-public abstract class Animal implements Animated{
+public class Character implements Animated{
     private String name;
-    public Animal(String name){
+    protected Printer printer;
+    public Character(String name){
         this.name=name;
+        printer = new ConsolePrinter();
     }
-    public abstract void say(String phrase);
+    public void doSimpleAction(SimpleAction action){
+        printer.printSimpleAction(this, action);
+    }
 
     @Override
     public String getName() {
@@ -28,7 +36,7 @@ public abstract class Animal implements Animated{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Animal animal = (Animal) o;
+        Character animal = (Character) o;
         return Objects.equals(name, animal.name);
     }
 
