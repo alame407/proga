@@ -1,17 +1,18 @@
-package org.itmo.lab4.characters;
+package org.itmo.lab4.structures;
 
 
 import org.itmo.lab4.actions.SimpleAction;
-import org.itmo.lab4.structures.ListOfAnimated;
+import org.itmo.lab4.characters.Animated;
+import org.itmo.lab4.characters.Character;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
 
 import java.util.Objects;
 
-public class Group{
+public class GroupOfAnimated{
     private Printer printer;
     private ListOfAnimated members;
-    public Group(){
+    public GroupOfAnimated(){
         members = new ListOfAnimated();
         printer = new ConsolePrinter();
     }
@@ -21,8 +22,8 @@ public class Group{
     public void kickMember(Animated member){
         members.remove(member);
     }
-    public void simpleAction(SimpleAction simpleAction){
-        printer.printSimpleAction(this, simpleAction);
+    public void doSimpleAction(SimpleAction simpleAction){
+        printer.print(this + " " + simpleAction);
     }
     @Override
     public String toString() {
@@ -35,7 +36,7 @@ public class Group{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Group group = (Group) o;
+        GroupOfAnimated group = (GroupOfAnimated) o;
         return Objects.equals(members, group.members);
     }
 

@@ -7,8 +7,8 @@ import org.itmo.lab4.enums.Agility;
 import org.itmo.lab4.enums.Height;
 import org.itmo.lab4.events.Game;
 import org.itmo.lab4.events.GameInterface;
-import org.itmo.lab4.things.Curtain;
-import org.itmo.lab4.things.Platform;
+import org.itmo.lab4.inanimate.Curtain;
+import org.itmo.lab4.inanimate.Platform;
 
 
 public class Main {

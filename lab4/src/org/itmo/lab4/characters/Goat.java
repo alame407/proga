@@ -1,9 +1,7 @@
 package org.itmo.lab4.characters;
 
 import org.itmo.lab4.enums.Agility;
-import org.itmo.lab4.printers.ConsolePrinter;
-import org.itmo.lab4.printers.Printer;
-import org.itmo.lab4.things.PlaceToHide;
+import org.itmo.lab4.inanimate.PlaceToHide;
 
 import java.util.Objects;
 

@@ -1,5 +1,6 @@
 package org.itmo.lab4.characters;
 
+import org.itmo.lab4.actions.ComplexAction;
 import org.itmo.lab4.actions.SimpleAction;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
@@ -14,15 +15,18 @@ public class Character implements Animated{
         printer = new ConsolePrinter();
     }
     public void doSimpleAction(SimpleAction action){
-        printer.printSimpleAction(this, action);
+        printer.print(this + " " + action);
     }
 
     @Override
+    public void doComplexAction(ComplexAction action) {
+        printer.print(this + " " + action);
+    }
+
     public String getName() {
         return name;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }

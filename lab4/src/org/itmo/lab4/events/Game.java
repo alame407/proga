@@ -5,6 +5,7 @@ import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
 import org.itmo.lab4.structures.ListOfAnimated;
 
+import java.util.AbstractCollection;
 import java.util.Objects;
 
 public class Game implements GameInterface{
@@ -30,6 +31,11 @@ public class Game implements GameInterface{
             printer.print("Такого игрока нет");
         }
 
+    }
+    public void throwBall(Animated fromPlayer, Animated toPlayer, float chance){
+        if (chance > Math.random()){
+            printer.print(fromPlayer + " " + "попал мячом по" + " " + toPlayer);
+        }
     }
 
     @Override

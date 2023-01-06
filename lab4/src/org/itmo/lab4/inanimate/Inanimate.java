@@ -1,10 +1,10 @@
-package org.itmo.lab4.things;
+package org.itmo.lab4.inanimate;
 
 import java.util.Objects;
 
-public abstract class Thing {
+public abstract class Inanimate {
     private String name;
-    public Thing(String name){
+    public Inanimate(String name){
         this.name=name;
     }
 
@@ -25,8 +25,8 @@ public abstract class Thing {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Thing thing = (Thing) o;
-        return Objects.equals(name, thing.name);
+        Inanimate inanimate = (Inanimate) o;
+        return Objects.equals(name, inanimate.name);
     }
 
     @Override
