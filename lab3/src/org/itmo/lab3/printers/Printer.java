@@ -6,5 +6,4 @@ import java.util.Objects;
 
 public interface Printer {
     void print(String text);
-    void printSimpleAction(Object subject, SimpleAction action);
 }

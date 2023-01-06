@@ -7,9 +7,4 @@ public class ConsolePrinter implements Printer{
     public void print(String text) {
         System.out.println(text);
     }
-
-    @Override
-    public void printSimpleAction(Object subject, SimpleAction action) {
-        this.print(subject + " " + action);
-    }
 }

@@ -12,7 +12,7 @@ public class Curtain extends Thing implements PlaceToHide {
         super(name);
         printer = new ConsolePrinter();
     }
-    public void restrictMovement(Animated character){
-        printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + character);
+    public void restrictMovement(Animated animated){
+        printer.print(this + " " + "не дает возможности сильно оклонять голову" + " " + animated);
     }
 }

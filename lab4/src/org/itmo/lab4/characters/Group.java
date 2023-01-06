@@ -8,7 +8,7 @@ import org.itmo.lab4.printers.Printer;
 
 import java.util.Objects;
 
-public class Group {
+public class Group{
     private Printer printer;
     private ListOfAnimated members;
     public Group(){

@@ -14,15 +14,12 @@ public class Character implements Animated{
         printer = new ConsolePrinter();
     }
     public void doSimpleAction(SimpleAction action){
-        printer.printSimpleAction(this, action);
+        printer.print(this + " " + action);
     }
-
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }
