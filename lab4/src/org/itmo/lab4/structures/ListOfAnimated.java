@@ -59,7 +59,7 @@ public class ListOfAnimated {
         for (int i=0; i<size; i++){
             string += elements[i];
             if (i != size -1){
-                string += " ";
+                string += ", ";
             }
         }
         string += "]";

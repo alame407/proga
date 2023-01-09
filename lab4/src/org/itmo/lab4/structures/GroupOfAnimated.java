@@ -1,9 +1,9 @@
 package org.itmo.lab4.structures;
 
 
+import org.itmo.lab4.actions.ComplexAction;
 import org.itmo.lab4.actions.SimpleAction;
 import org.itmo.lab4.characters.Animated;
-import org.itmo.lab4.characters.Character;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
 
@@ -16,7 +16,14 @@ public class GroupOfAnimated{
         members = new ListOfAnimated();
         printer = new ConsolePrinter();
     }
-    public void addMember(Character member){
+    public GroupOfAnimated(Animated ... val){
+        members = new ListOfAnimated();
+        printer = new ConsolePrinter();
+        for(Animated animated: val){
+            this.addMember(animated);
+        }
+    }
+    public void addMember(Animated member){
         members.add(member);
     }
     public void kickMember(Animated member){
@@ -24,6 +31,9 @@ public class GroupOfAnimated{
     }
     public void doSimpleAction(SimpleAction simpleAction){
         printer.print(this + " " + simpleAction);
+    }
+    public void doComplexAction(ComplexAction complexAction){
+        printer.print(this + " " + complexAction);
     }
     @Override
     public String toString() {

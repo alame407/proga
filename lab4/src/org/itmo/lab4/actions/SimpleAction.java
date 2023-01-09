@@ -9,6 +9,11 @@ public class SimpleAction {
     public SimpleAction(String action){
         this.action = action;
     }
+    public SimpleAction(String action, String preposition, Object object){
+        this.action = action;
+        this.preposition = preposition;
+        this.object = object;
+    }
     public void setAction(String action){
         this.action = action;
     }

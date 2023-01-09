@@ -10,6 +10,6 @@ public class Street extends Inanimate implements Place{
         printer = new ConsolePrinter();
     }
      public void fill(String object){
-        printer.print(this + " " + "наполнились" + object);
+        printer.print(this + " " + "наполнились" + " " + object);
      }
 }

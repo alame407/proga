@@ -1,19 +1,21 @@
-package org.itmo.lab4.inanimate;
+package org.itmo.lab3.characters;
+
+import org.itmo.lab3.actions.SimpleAction;
 
 import java.util.Objects;
 
-public class Inanimate {
+public abstract class AbstractCharacter implements Animated{
     private String name;
-    public Inanimate(String name){
-        this.name=name;
+    public AbstractCharacter(String name){
+        this.name = name;
+    }
+    public abstract void doSimpleAction(SimpleAction action);
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override
@@ -25,8 +27,8 @@ public class Inanimate {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Inanimate inanimate = (Inanimate) o;
-        return Objects.equals(name, inanimate.name);
+        AbstractCharacter that = (AbstractCharacter) o;
+        return Objects.equals(name, that.name);
     }
 
     @Override
