@@ -23,10 +23,10 @@ public class Group {
         this.members = new ArrayList<>(List.of(members));
         printer = new ConsolePrinter();
     }
-    public void addMember(Animated member){
+    public void addMember(AbstractCharacter member){
         members.add(member);
     }
-    public void kickMember(Animated member){
+    public void kickMember(AbstractCharacter member){
         members.remove(member);
     }
     public void doSimpleAction(SimpleAction simpleAction){

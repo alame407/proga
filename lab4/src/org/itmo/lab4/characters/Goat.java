@@ -5,11 +5,11 @@ import org.itmo.lab4.inanimate.PlaceToHide;
 
 import java.util.Objects;
 
-public class Goat extends Character {
+public class Goat extends OrdinaryCharacter {
     private Agility agility;
 
-    public Goat(String name, Agility agility){
-        super(name);
+    public Goat(String name, Agility agility, int money){
+        super(name, money);
         this.agility = agility;
     }
     public Agility getAgility() {

@@ -1,45 +1,49 @@
 package org.itmo.lab4.events;
 
+import org.itmo.lab4.characters.AbstractCharacter;
 import org.itmo.lab4.characters.Animated;
+import org.itmo.lab4.exceptions.NoSuchPlayerExceptions;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
-import org.itmo.lab4.structures.ListOfAnimated;
 
-import java.util.AbstractCollection;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Game implements GameInterface{
-    private ListOfAnimated members;
-    private Printer printer;
+    private List<Animated> members;
+    protected Printer printer;
 
     public Game(){
-        members = new ListOfAnimated();
+        members = new ArrayList<>();
+        printer = new ConsolePrinter();
+    }
+    public Game(Animated ... members) {
+        this.members = new ArrayList<>(List.of(members));
         printer = new ConsolePrinter();
     }
     @Override
     public void start() {
         printer.print("Игра началась");
     }
+    public boolean contains(AbstractCharacter player){
+        return members.contains(player);
+    }
 
     @Override
-    public void kickMember(Animated player) {
-        if (members.contains(player)){
+    public void kickMember(AbstractCharacter player) throws NoSuchPlayerExceptions {
+        if (contains(player)){
             members.remove(player);
             printer.print(player + " " + "получил мячом по лбу");
         }
         else{
-            printer.print("Такого игрока нет");
+            throw new NoSuchPlayerExceptions(player);
         }
 
-    }
-    public void throwBall(Animated fromPlayer, Animated toPlayer, float chance){
-        if (chance > Math.random()){
-            printer.print(fromPlayer + " " + "попал мячом по" + " " + toPlayer);
-        }
     }
 
     @Override
-    public void addMember(Animated player) {
+    public void addMember(AbstractCharacter player) {
         members.add(player);
         printer.print(player + " " + "участвует в игре");
     }

@@ -7,8 +7,9 @@ import org.itmo.lab4.printers.Printer;
 
 public class OrdinaryCharacter extends AbstractCharacter{
     protected Printer printer;
-    public OrdinaryCharacter(String name){
-        super(name);
+
+    public OrdinaryCharacter(String name, int money){
+        super(name, money);
         printer = new ConsolePrinter();
     }
     @Override

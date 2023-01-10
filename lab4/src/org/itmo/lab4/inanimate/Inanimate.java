@@ -2,7 +2,7 @@ package org.itmo.lab4.inanimate;
 
 import java.util.Objects;
 
-public class Inanimate {
+public abstract class Inanimate {
     private String name;
     public Inanimate(String name){
         this.name=name;

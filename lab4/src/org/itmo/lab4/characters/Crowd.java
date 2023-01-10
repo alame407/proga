@@ -1,16 +1,14 @@
 package org.itmo.lab4.characters;
 
 import org.itmo.lab4.enums.Height;
-import org.itmo.lab4.printers.ConsolePrinter;
-import org.itmo.lab4.printers.Printer;
 
 import java.util.Objects;
 
-public class Crowd extends Character{
+public class Crowd extends OrdinaryCharacter {
     private Height height;
 
-    public Crowd(String name, Height height){
-        super(name);
+    public Crowd(String name, Height height, int money){
+        super(name, money);
         this.height = height;
     }
 

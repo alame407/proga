@@ -25,6 +25,7 @@ public class Game implements GameInterface{
     public void start() {
         printer.print("Игра началась");
     }
+    public boolean
 
     @Override
     public void kickMember(AbstractCharacter player) {
