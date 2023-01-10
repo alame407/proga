@@ -1,5 +1,6 @@
 package org.itmo.lab3.events;
 
+import org.itmo.lab3.characters.AbstractCharacter;
 import org.itmo.lab3.characters.Animated;
 import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
@@ -26,7 +27,7 @@ public class Game implements GameInterface{
     }
 
     @Override
-    public void kickMember(Animated player) {
+    public void kickMember(AbstractCharacter player) {
         if (members.contains(player)){
             members.remove(player);
             printer.print(player + " " + "получил мячом по лбу");
@@ -38,7 +39,7 @@ public class Game implements GameInterface{
     }
 
     @Override
-    public void addMember(Animated player) {
+    public void addMember(AbstractCharacter player) {
         members.add(player);
         printer.print(player + " " + "участвует в игре");
     }

@@ -3,25 +3,25 @@ package org.itmo.lab4.structures;
 
 import org.itmo.lab4.actions.ComplexAction;
 import org.itmo.lab4.actions.SimpleAction;
+import org.itmo.lab4.characters.AbstractCharacter;
 import org.itmo.lab4.characters.Animated;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class GroupOfAnimated{
+public class Group {
     private Printer printer;
-    private ListOfAnimated members;
-    public GroupOfAnimated(){
-        members = new ListOfAnimated();
+    private List<AbstractCharacter> members;
+    public Group(){
+        members = new ArrayList<>();
         printer = new ConsolePrinter();
     }
-    public GroupOfAnimated(Animated ... val){
-        members = new ListOfAnimated();
+    public Group(AbstractCharacter ... members){
+        this.members = new ArrayList<>(List.of(members));
         printer = new ConsolePrinter();
-        for(Animated animated: val){
-            this.addMember(animated);
-        }
     }
     public void addMember(Animated member){
         members.add(member);
@@ -46,7 +46,7 @@ public class GroupOfAnimated{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        GroupOfAnimated group = (GroupOfAnimated) o;
+        Group group = (Group) o;
         return Objects.equals(members, group.members);
     }
 
