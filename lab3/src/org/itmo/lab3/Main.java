@@ -27,9 +27,7 @@ public class Main {
         crowd.doSimpleAction(laugh);
         SimpleAction doNotCare = new SimpleAction("не обращает внимание", "на", crowd);
         goat.doSimpleAction(doNotCare);
-        GameInterface game = new Game();
-        game.addMember(crowd);
-        game.addMember(goat);
+        GameInterface game = new Game(crowd, goat);
         goat.hide(curtain);
         goat.setAgility(Agility.HIGH);
         game.start();

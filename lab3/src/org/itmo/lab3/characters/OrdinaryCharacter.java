@@ -4,11 +4,9 @@ import org.itmo.lab3.actions.SimpleAction;
 import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
 
-import java.util.Objects;
-
-public class Character extends AbstractCharacter{
+public class OrdinaryCharacter extends AbstractCharacter{
     protected Printer printer;
-    public Character(String name){
+    public OrdinaryCharacter(String name){
         super(name);
         printer = new ConsolePrinter();
     }

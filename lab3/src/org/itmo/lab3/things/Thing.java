@@ -2,7 +2,7 @@ package org.itmo.lab3.things;
 
 import java.util.Objects;
 
-public class Thing {
+public abstract class Thing {
     private String name;
     public Thing(String name){
         this.name=name;

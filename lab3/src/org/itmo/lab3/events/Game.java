@@ -3,16 +3,21 @@ package org.itmo.lab3.events;
 import org.itmo.lab3.characters.Animated;
 import org.itmo.lab3.printers.ConsolePrinter;
 import org.itmo.lab3.printers.Printer;
-import org.itmo.lab3.structures.ListOfAnimated;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Game implements GameInterface{
-    private ListOfAnimated members;
-    private Printer printer;
+    private List<Animated> members;
+    protected Printer printer;
 
     public Game(){
-        members = new ListOfAnimated();
+        members = new ArrayList<>();
+        printer = new ConsolePrinter();
+    }
+    public Game(Animated ... members) {
+        this.members = new ArrayList<>(List.of(members));
         printer = new ConsolePrinter();
     }
     @Override

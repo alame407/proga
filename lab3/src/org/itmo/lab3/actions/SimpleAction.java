@@ -21,8 +21,8 @@ public class SimpleAction {
         this.preposition = preposition;
         this.object = object;
     }
-    @Override
-    public String toString() {
+        @Override
+        public String toString() {
         String string = action;
         if (!(preposition==null || preposition.equals(""))){
             string += " " + preposition;

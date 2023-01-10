@@ -1,12 +1,10 @@
 package org.itmo.lab3.characters;
 
 import org.itmo.lab3.enums.Height;
-import org.itmo.lab3.printers.ConsolePrinter;
-import org.itmo.lab3.printers.Printer;
 
 import java.util.Objects;
 
-public class Crowd extends Character{
+public class Crowd extends OrdinaryCharacter {
     private Height height;
 
     public Crowd(String name, Height height){

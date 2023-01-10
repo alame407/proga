@@ -1,13 +1,11 @@
 package org.itmo.lab3.characters;
 
 import org.itmo.lab3.enums.Agility;
-import org.itmo.lab3.printers.ConsolePrinter;
-import org.itmo.lab3.printers.Printer;
 import org.itmo.lab3.things.PlaceToHide;
 
 import java.util.Objects;
 
-public class Goat extends Character {
+public class Goat extends OrdinaryCharacter {
     private Agility agility;
 
     public Goat(String name, Agility agility){
