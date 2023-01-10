@@ -17,7 +17,7 @@ public class Game implements GameInterface{
         members = new ArrayList<>();
         printer = new ConsolePrinter();
     }
-    public Game(Animated ... members) {
+    public Game(AbstractCharacter ... members) {
         this.members = new ArrayList<>(List.of(members));
         printer = new ConsolePrinter();
     }
