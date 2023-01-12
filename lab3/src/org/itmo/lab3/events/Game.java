@@ -27,10 +27,10 @@ public class Game implements GameInterface{
     }
 
     @Override
-    public void kickMember(AbstractCharacter player) {
-        if (members.contains(player)){
-            members.remove(player);
-            printer.print(player + " " + "получил мячом по лбу");
+    public void kickMember(AbstractCharacter member) {
+        if (members.contains(member)){
+            members.remove(member);
+            printer.print(member + " " + "получил мячом по лбу");
         }
         else{
             printer.print("Такого игрока нет");
@@ -39,9 +39,9 @@ public class Game implements GameInterface{
     }
 
     @Override
-    public void addMember(AbstractCharacter player) {
-        members.add(player);
-        printer.print(player + " " + "участвует в игре");
+    public void addMember(AbstractCharacter member) {
+        members.add(member);
+        printer.print(member + " " + "участвует в игре");
     }
 
     @Override
