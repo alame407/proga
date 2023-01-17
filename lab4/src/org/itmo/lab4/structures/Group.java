@@ -1,10 +1,7 @@
 package org.itmo.lab4.structures;
 
-
-import org.itmo.lab4.actions.ComplexAction;
 import org.itmo.lab4.actions.SimpleAction;
 import org.itmo.lab4.characters.AbstractCharacter;
-import org.itmo.lab4.characters.Animated;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
 
@@ -13,14 +10,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class Group {
-    private Printer printer;
+    protected Printer printer;
     private List<AbstractCharacter> members;
     public Group(){
         members = new ArrayList<>();
-        printer = new ConsolePrinter();
-    }
-    public Group(AbstractCharacter ... members){
-        this.members = new ArrayList<>(List.of(members));
         printer = new ConsolePrinter();
     }
     public void addMember(AbstractCharacter member){
@@ -29,11 +22,8 @@ public class Group {
     public void kickMember(AbstractCharacter member){
         members.remove(member);
     }
-    public void doSimpleAction(SimpleAction simpleAction){
+    public void doAction(SimpleAction simpleAction){
         printer.print(this + " " + simpleAction);
-    }
-    public void doComplexAction(ComplexAction complexAction){
-        printer.print(this + " " + complexAction);
     }
     @Override
     public String toString() {

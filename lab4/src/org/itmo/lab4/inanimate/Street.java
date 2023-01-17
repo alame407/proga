@@ -12,4 +12,9 @@ public class Street extends Inanimate implements Place{
      public void fill(String object){
         printer.print(this + " " + "наполнились" + " " + object);
      }
+
+    @Override
+    public String name() {
+        return getName();
+    }
 }

@@ -53,10 +53,10 @@ public class ComplexAction extends SimpleAction{
             string += " " + placePreposition;
         }
         if (place!=null ){
-            string += " " + place;
+            string += " " + place.name();
         }
         if (!(emotion==null || emotion.equals(""))){
-            string += " " + "с" + " " + emotion;
+            string += " " + emotion;
         }
         return string;
     }

@@ -1,6 +1,5 @@
 package org.itmo.lab4.characters;
 
-import org.itmo.lab4.actions.ComplexAction;
 import org.itmo.lab4.actions.SimpleAction;
 
 import java.util.Objects;
@@ -12,8 +11,7 @@ public abstract class AbstractCharacter implements Animated{
         this.name = name;
         this.money = money;
     }
-    public abstract void doSimpleAction(SimpleAction action);
-    public abstract void doComplexAction(ComplexAction action);
+    public abstract void doAction(SimpleAction action);
 
     public int getMoney() {
         return money;
@@ -22,7 +20,6 @@ public abstract class AbstractCharacter implements Animated{
     public void setMoney(int money) {
         this.money = money;
     }
-
     public String getName() {
         return name;
     }

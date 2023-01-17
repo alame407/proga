@@ -1,6 +1,5 @@
 package org.itmo.lab4.characters;
 
-import org.itmo.lab4.actions.ComplexAction;
 import org.itmo.lab4.actions.SimpleAction;
 import org.itmo.lab4.printers.ConsolePrinter;
 import org.itmo.lab4.printers.Printer;
@@ -13,12 +12,9 @@ public class OrdinaryCharacter extends AbstractCharacter{
         printer = new ConsolePrinter();
     }
     @Override
-    public void doSimpleAction(SimpleAction action){
+    public void doAction(SimpleAction action){
         printer.print(this + " " + action);
     }
 
-    @Override
-    public void doComplexAction(ComplexAction action) {
-        printer.print(this+ " " + action);
-    }
+
 }

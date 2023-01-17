@@ -30,6 +30,11 @@ public class Curtain extends Inanimate implements PlaceToHide {
     }
 
     @Override
+    public String name() {
+        return getName();
+    }
+
+    @Override
     public String toString() {
         return getName() + " " + "сделанный из" + " " + material;
     }

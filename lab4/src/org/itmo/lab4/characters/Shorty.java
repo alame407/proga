@@ -4,14 +4,20 @@ public class Shorty extends OrdinaryCharacter {
     public Shorty(String name, int money) {
         super(name, money);
     }
-    public class Eye{
+    public class Eyes {
         public void close(){
-            printer.print("глаз" + " " + Shorty.this + " " + "закрылся и перестал видеть");
+            printer.print("глаза" + " " + Shorty.this + " " + "закрылись и перестали видеть");
         }
     }
-    public class Eyelid{
-        public void swell(){
-            printer.print("веко у" + " " + Shorty.this + " " + "распухло");
+    public void injureEyes(String cause){
+        class Eyelid{
+            public String swell(String cause){
+                return "веко у" + " " + Shorty.this + " " + "распухло из-за" + " " + cause;
+            }
         }
+        Eyelid eyelid = new Eyelid();
+        Shorty  .Eyes shortyEyes = new Eyes();
+        shortyEyes.close();
+        printer.print(eyelid.swell(cause));
     }
 }

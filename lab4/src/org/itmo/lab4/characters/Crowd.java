@@ -4,7 +4,7 @@ import org.itmo.lab4.enums.Height;
 
 import java.util.Objects;
 
-public class Crowd extends OrdinaryCharacter {
+public class Crowd extends OrdinaryPlayer {
     private Height height;
 
     public Crowd(String name, Height height, int money){
@@ -18,6 +18,12 @@ public class Crowd extends OrdinaryCharacter {
 
     public void setHeight(Height height) {
         this.height = height;
+    }
+    public void thin(){
+        printer.print(this + " " + "начала редеть");
+    }
+    public void disappear(){
+        printer.print(this + " " + "рассеялась");
     }
 
     @Override
